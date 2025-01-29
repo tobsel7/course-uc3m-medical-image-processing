@@ -1,0 +1,3 @@
+Matrix size: 256x300
+Data type: signed int16
+Endianness: little endian

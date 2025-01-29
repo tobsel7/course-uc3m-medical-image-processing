@@ -1,0 +1,4 @@
+Matrix size: 256x256
+Data type: signed int16
+Endianness: little endian
+Number or slices: 20
