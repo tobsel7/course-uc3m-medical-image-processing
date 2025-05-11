@@ -5,14 +5,10 @@ function overlay_image(image, mask, aspect)
 
     % Create RGB image from grayscale
     rgb = repmat(image, [1, 1, 3]);
-    red = [1, 0, 0];
 
     % Color the mask red
-    for c = 1:3
-        channel = rgb(:, :, c);
-        channel(mask > 0) = red(c);
-        rgb(:, :, c) = channel;
-    end
+    red = cat(3, ones(size(image)), zeros(size(image)), zeros(size(image)));
+    rgb(mask > 0) = red(mask > 0);
 
     % Display the image
     imshow(rgb);
